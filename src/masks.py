@@ -12,4 +12,4 @@ def get_mask_card_number(cart_namber: str) -> str:
 def get_mask_account(account: str) -> str:
     """Маскировка номера банковского счета"""
     # mask_account = account.replace(account[:12], "**")
-    return account.replace(account[:12], "**")
+    return account.replace(account[:16], "**")
