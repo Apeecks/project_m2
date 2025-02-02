@@ -1,5 +1,7 @@
 import re
-from masks import get_mask_card_number, get_mask_account
+
+from masks import get_mask_account, get_mask_card_number
+
 
 def mask_account_card(info_cart: str) -> str:
     """ Получение, сведений о карте или счете """
@@ -13,6 +15,6 @@ def mask_account_card(info_cart: str) -> str:
     return info_cart_masks
 
 
-def get_date(data):
+def get_date(data: str) -> str:
     data_t = [data[8:10], data[5:7], data[0:4]]
     return ".".join(data_t)
