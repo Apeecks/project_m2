@@ -32,4 +32,3 @@ line-length = 119
 
 [tool.isort]
 line_length = 119
-

@@ -1,7 +1,7 @@
-def filter_by_state(list_: list, state="EXECUTED") -> list:
+def filter_by_state(unsorted_list: list, state: str="EXECUTED") -> list:
     """Сортировка по указанному ключу: state"""
     list_sort = []
-    for x in list_:
+    for x in unsorted_list:
         if x.get("state") == state:
             list_sort.append(x)
         else:
@@ -9,6 +9,6 @@ def filter_by_state(list_: list, state="EXECUTED") -> list:
     return list_sort
 
 
-def sort_by_date(list_, a=True):
+def sort_by_date(unsorted_list: list, reverse: bool=True) -> list:
     """Сортировка по дате"""
-    return sorted(list_, key=lambda x: x['date'], reverse=a)
+    return sorted(unsorted_list, key=lambda x: x["date"], reverse=reverse)
