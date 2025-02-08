@@ -16,5 +16,6 @@ def mask_account_card(info_cart: str) -> str:
 
 
 def get_date(data: str) -> str:
+    """ Изменение формата даты """
     data_t = [data[8:10], data[5:7], data[0:4]]
     return ".".join(data_t)
