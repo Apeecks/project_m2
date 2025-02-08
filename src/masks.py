@@ -1,6 +1,6 @@
 def get_mask_card_number(cart_namber: str) -> str:
     """Маскировка номера банковской карты"""
-    return x[0:4] + " " + x[4:6] + "**" + " " + "****" + " " + x[12:16]
+    return cart_namber[0:4] + " " + cart_namber[4:6] + "**" + " " + "****" + " " + cart_namber[12:16]
 
 
 
