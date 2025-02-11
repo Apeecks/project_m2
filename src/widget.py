@@ -1,10 +1,10 @@
 import re
 
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(info_cart: str) -> str:
-    """ Получение, сведений о карте или счете """
+    """Получение, сведений о карте или счете"""
     number = "".join(re.findall(r"[0-9]", info_cart))
     if len(number) == 16:
         numser_masks = get_mask_card_number(number)
@@ -16,5 +16,6 @@ def mask_account_card(info_cart: str) -> str:
 
 
 def get_date(data: str) -> str:
+    """Изменение формата даты"""
     data_t = [data[8:10], data[5:7], data[0:4]]
     return ".".join(data_t)
