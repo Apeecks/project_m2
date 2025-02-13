@@ -11,6 +11,14 @@ git clone https://github.com/Apeecks/project_m2.git
 ```
 poetry install
 ```
+## Тестирование
+Проект покрыт тестами. Для их запуска выполните команду:
+```commandline
+pytest
+```
+```commandline
+pytest --cov
+```
 ## Описание и примеры работы функций:
 
 #### Модуль masks:
