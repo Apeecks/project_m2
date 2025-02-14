@@ -14,7 +14,7 @@ from src.widget import get_date, mask_account_card
         ("Visa Platinum 7000792289606361", "Visa Platinum 7000 79** **** 6361"),
         ("Visa Classic 1111111111111111", "Visa Classic 1111 11** **** 1111"),
         ("Visa 1111222233334444", "Visa 1111 22** **** 4444"),
-    ],
+    ]
 )
 def test_mask_account_card(info_cart: str, result: str) -> Any:
     """Проверка функции mask_account_card"""
@@ -27,7 +27,7 @@ def test_mask_account_card(info_cart: str, result: str) -> Any:
         ("Visa 11112222333344", "Неверный формат"),
         ("Счет 1111222233334444555566", "Неверный формат"),
         ("", "Неверный формат"),
-    ],
+    ]
 )
 def test_error_mask_account_card(info_cart: str, result: str) -> Any:
     """Проверка функции mask_account_card на ошибки"""
@@ -37,7 +37,11 @@ def test_error_mask_account_card(info_cart: str, result: str) -> Any:
 
 
 @pytest.mark.parametrize(
-    "data, result", [("2024-03-11T02:26:18.671407", "11.03.2024"), ("2025-11-10T02:26:18.671407", "10.11.2025")]
+    "data, result",
+    [
+        ("2024-03-11T02:26:18.671407", "11.03.2024"),
+        ("2025-11-10T02:26:18.671407", "10.11.2025")
+    ]
 )
 def test_get_date(data: str, result: str) -> Any:
     """Проверка функции get_date"""
@@ -51,7 +55,7 @@ def test_get_date(data: str, result: str) -> Any:
         ("2024-03T02:26:18.671407", "Неверный формат"),
         ("T02:26:18.671407", "Неверный формат"),
         ("", "Неверный формат"),
-    ],
+    ]
 )
 def test_error_get_date(data: str, result: str) -> Any:
     """Проверка функции get_date на ошибки"""

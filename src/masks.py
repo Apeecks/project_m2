@@ -4,8 +4,6 @@ def get_mask_card_number(cart_namber: str) -> str:
         raise TypeError("Номер карты не введен")
     elif len(cart_namber) != 16:
         raise TypeError("Неправильно введен номер карты")
-    elif cart_namber.isdigit():
-        raise TypeError("Неверный формат")
 
     return cart_namber[0:4] + " " + cart_namber[4:6] + "**" + " " + "****" + " " + cart_namber[12:16]
 
@@ -16,7 +14,5 @@ def get_mask_account(account: str) -> str:
         raise TypeError("Номер счета не введен")
     elif len(account) != 20:
         raise TypeError("Неправильно введен номер счета")
-    elif account.isdigit():
-        raise TypeError("Неверный формат")
 
     return account.replace(account[:16], "**")
