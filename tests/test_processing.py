@@ -39,7 +39,7 @@ def test_sort_by_date(unsorted_list_date: list, sorted_list_date: list, reverse_
         ([{"id": 939719570, "state": "EXECUTED", "date": "18-06-30T02:08:58.425572"}], "Неверный формат"),
         ([{"id": 939719570, "state": "EXECUTED", "date": "2025-06T02:08:58.425572"}], "Неверный формат"),
         ([{"id": 939719570, "state": "EXECUTED", "date": "T02:08:58.425572"}], "Неверный формат"),
-    ]
+    ],
 )
 def test_error_sort_by_data(data_sort_list: list, result: str) -> Any:
     """Проверка функции sort_by_date на ошибки"""

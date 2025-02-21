@@ -23,7 +23,7 @@ def mask_account_card(info_cart: str) -> str:
 
 
 def get_date(data: str) -> str:
-    """ Изменение формата даты """
+    """Изменение формата даты"""
     if data == "":
         raise ValueError("Неверный формат")
     elif data[4] != "-":
